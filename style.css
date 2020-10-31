@@ -1,0 +1,156 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 400vh;
+  position: relative;
+}
+/* Section one container */
+.section1 {
+  position: relative;
+}
+/* Nav bar */
+
+.navbar {
+  top: 0;
+  position: sticky;
+  height: auto;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 10px;
+}
+/* navbar Toggle class */
+/* .nav-toggle {
+  height: 80px;
+} */
+
+/* Logo Container */
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10;
+  width: 100%;
+
+  /* position: fixed;
+  width: 100%; */
+}
+/* Menu Btn */
+.fas {
+  color: hsla(182, 63%, 54%, 1);
+  font-size: 20px;
+}
+/* butn properties */
+.btn {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  height: 20px;
+  margin-top: 10px;
+}
+/* Logo  */
+#logo1 {
+  width: 50px;
+}
+/* Ul container */
+.list-elements {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 150px;
+  justify-content: space-between;
+}
+/* List Elements (Nav Menu elements) */
+.list {
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  color: hsla(210, 22%, 49%, 1);
+}
+
+/* Section 1 Background */
+.background {
+  position: relative;
+  width: 100%;
+  height: 200vw;
+  background: url("./Photos/mountains.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* background image Overlay */
+.overlay {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 63, 65, 0.733);
+  opacity: 0.8;
+}
+/* Section one contant Container */
+.section1-content {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(5%, 35vh);
+  z-index: 10;
+  text-align: center;
+}
+/* Section one heading */
+.section1-content h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+/* Section one Paragraph */
+.section1-content p {
+  font-size: 15px;
+  word-wrap: 100%;
+  text-align: center;
+  padding: 20px;
+}
+/* Section one Btn */
+.sec1-btn {
+  letter-spacing: 0.25rem;
+  background-color: inherit;
+  padding: 10px;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 807px) {
+  .navbar {
+    width: 100%;
+    background-color: inherit;
+  }
+
+  .logoContainer {
+    position: relative;
+  }
+
+  .list-elements {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 60%;
+    flex-direction: row;
+    color: white;
+    top: 30px;
+    right: 40px;
+  }
+  .list {
+    color: white;
+  }
+  .btn {
+    display: none;
+  }
+}
