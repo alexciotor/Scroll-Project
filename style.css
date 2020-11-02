@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  height: 400vh;
+  height: 200vh;
   position: relative;
 }
 /* Section one container */
@@ -16,13 +16,13 @@ body {
 
 .navbar {
   top: 0;
-  position: sticky;
+  z-index: 100000;
   height: auto;
-  z-index: 100;
   background-color: white;
   width: 100%;
   padding-bottom: 10px;
 }
+
 /* navbar Toggle class */
 /* .nav-toggle {
   height: 80px;
@@ -56,6 +56,16 @@ body {
 #logo1 {
   width: 50px;
 }
+.menuItems {
+  background-color: white;
+  position: relative;
+  display: block;
+  max-height: 150px;
+  transition: all 0.3s;
+}
+.menuItems-toggle {
+  max-height: 0;
+}
 /* Ul container */
 .list-elements {
   display: flex;
@@ -66,22 +76,25 @@ body {
 }
 /* List Elements (Nav Menu elements) */
 .list {
+  margin-top: 20px;
   font-weight: bold;
   letter-spacing: 5px;
   padding-left: 20px;
   text-transform: capitalize;
   color: hsla(210, 22%, 49%, 1);
+  transition-property: color;
 }
 
 /* Section 1 Background */
 .background {
   position: relative;
   width: 100%;
-  height: 200vw;
+  height: calc(119vh - 247px);
   background: url("./Photos/mountains.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: block;
 }
 
 /* background image Overlay */
@@ -92,6 +105,7 @@ body {
   height: 100%;
   background-color: rgba(26, 63, 65, 0.733);
   opacity: 0.8;
+  display: block;
 }
 /* Section one contant Container */
 .section1-content {
@@ -102,9 +116,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(5%, 35vh);
+  transform: translate(5%, 15vh);
   z-index: 10;
   text-align: center;
+  display: block;
 }
 /* Section one heading */
 .section1-content h1 {
@@ -128,9 +143,13 @@ body {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 807px) {
+  /* * {
+    transition: all 2s;
+  } */
   .navbar {
     width: 100%;
     background-color: inherit;
+    transition: 0.1s;
   }
 
   .logoContainer {
@@ -138,19 +157,28 @@ body {
   }
 
   .list-elements {
-    top: 0;
-    right: 0;
     position: absolute;
     width: 60%;
-    flex-direction: row;
     color: white;
+    top: 0;
     top: 30px;
+    right: 0;
     right: 40px;
+    flex-direction: row;
   }
   .list {
-    color: white;
+    transition: 2s;
+    color: rgb(215, 224, 233);
+    padding: 3px;
   }
   .btn {
     display: none;
+  }
+  .background {
+    background-position: center;
+    background-size: cover;
+  }
+  .section1 {
+    height: 100vh;
   }
 }
