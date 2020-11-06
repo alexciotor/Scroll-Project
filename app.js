@@ -44,7 +44,7 @@ navElements.style.height = `${elementHeight}px`
     else{
         header.classList.remove('header')
     }
-
-
-
  })
+
+
+//  no comment on this line
